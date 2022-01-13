@@ -1,0 +1,73 @@
+.container-fluid {
+  text-align: left;
+  display: inline-block;
+  margin: 10rem 0;
+padding: auto;
+line-height: 50px;
+}
+
+.profile-pic {
+  float: left;
+  border-radius: 100%;
+  width: 10%;
+}
+
+.desc {
+  display: inline-block;
+  margin-left: 10px;
+}
+.picture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  justify-items: center;
+  grid-gap: 5px;
+  grid-row-gap: 0px;
+}
+
+.grid-box img {
+  width: 100%;
+}
+
+figure {
+ border: 1px #cccccc solid;
+  padding: 0.5rem;
+  
+  
+ 
+}
+
+/* figcaption {
+ 
+  text-align: left;
+} */
+
+/* 
+.picture-1 {
+grid-area: a;
+}
+.picture-2{
+grid-area: b;
+}
+.picture-3{
+grid-area: c;
+} */
+
+
+
+
+
+/* .circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+} */
+
