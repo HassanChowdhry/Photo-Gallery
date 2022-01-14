@@ -46,7 +46,7 @@ justify-items:end ;
   height: 100%;
 
 }
-.grid-box img:hover {
+img:hover {
   opacity: 75%;
 }
 

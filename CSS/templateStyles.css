@@ -1,0 +1,36 @@
+body {
+  background-color: #171717;
+  color: #EDEDED;
+  text-align: center;
+}
+
+.plap {
+  margin-top: 5rem;
+}
+.figure {
+  border: 5px #2b26269b solid;
+  height: 50%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.figure-img {
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+.description {
+  color: #EDEDED;
+  text-align: center;
+}
+
+small {
+  text-align:center;
+  color: grey;
+}
+.btn {
+  margin-top: 2rem;
+}
