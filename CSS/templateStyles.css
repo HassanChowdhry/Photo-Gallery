@@ -1,6 +1,10 @@
 body {
   background-color: #171717;
   color: #EDEDED;
+ 
+}
+
+#page {
   text-align: center;
 }
 
@@ -30,7 +34,4 @@ padding: 0;
 small {
   text-align:center;
   color: grey;
-}
-.btn {
-  margin-top: 2rem;
 }
