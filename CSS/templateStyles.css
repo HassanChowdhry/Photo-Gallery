@@ -1,7 +1,11 @@
 body {
   background-color: #171717;
   color: #EDEDED;
- 
+}
+
+small {
+  text-align: center;
+  color: grey;
 }
 
 #page {
@@ -11,6 +15,7 @@ body {
 .plap {
   margin-top: 5rem;
 }
+
 .figure {
   border: 5px #2b26269b solid;
   height: 50%;
@@ -20,18 +25,13 @@ body {
 }
 
 .figure-img {
-width: 100%;
-height: 100%;
-margin: 0;
-padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .description {
   color: #EDEDED;
   text-align: center;
-}
-
-small {
-  text-align:center;
-  color: grey;
 }
