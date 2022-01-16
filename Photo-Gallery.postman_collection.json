@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "7199cd2a-b44e-4189-9578-4801966d84c3",
+		"name": "Photo-Gallery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "images",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json",
+					"protocol": "https",
+					"host": [
+						"image-gallery-pjks",
+						"s3",
+						"ca-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"data.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
