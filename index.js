@@ -6,28 +6,42 @@ let image = document.querySelector(".profile-pic");
           alert("Not available!");
          }
       
-
+         let myHeaders = new Headers();
+         myHeaders.append("Origin", "https://localhost.com");
+         
+         let requestOptions = {
+           method: 'GET',
+           headers: myHeaders,
+           redirect: 'follow'
+         };
          let gallery = document.querySelector(".picture-grid");
-         let imageIndexes = [1,2,3,4,5]
-         let selectedIndex = null;
          
          
-         imageIndexes.forEach(i => {
-           let container = document.createElement('div');
-           container.classList.add('grid-box');
-           gallery.appendChild(container);
+         let arrayPromise = fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json", requestOptions)
+               .then(res => res.json())
+               .then(res => {
+                 console.log(res)
+                 return res;
+               });
          
-         
-           let link = document.createElement('a');
-           link.href = `../template.html`;
-           container.appendChild(link);
+         arrayPromise.then(responseArray => {
+           responseArray.forEach(item => {
+             let container = document.createElement('div');
+             container.classList.add('grid-box');
+             gallery.appendChild(container);
            
            
-           let frame = document.createElement('figure');
-           link.appendChild(frame);
-          
-           let image = document.createElement('img');
-           image.src = `images/${i}.jpg`;
-           image.alt = `${i}-photo`; 
-           frame.appendChild(image);
+             let link = document.createElement('a');
+             link.href = `template.html`;
+             container.appendChild(link);
+           
+           
+             let frame = document.createElement('figure');
+             link.appendChild(frame);
+           
+             let image = document.createElement('img');
+             image.src = item.url;
+             image.alt = `${item.url}-photo`;
+             frame.appendChild(image);
+           })
          });
