@@ -1,7 +1,6 @@
 let image = document.querySelector(".profile-pic");
 
 image.onclick = function () {
-
   alert("Not available!");
 }
 
