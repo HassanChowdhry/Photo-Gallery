@@ -3,18 +3,18 @@ body {
   color: #EDEDED;
 }
 
-.location {
-  text-align: center;
-  color: grey;
-}
-
-#page {
-  text-align: center;
-}
-
-.plap {
+.template {
   margin: 5rem 30rem 0;
   text-align: right;
+  
+}
+.frame {
+  text-align: left;
+}
+
+.location {
+  text-align: right;
+  color: grey;
 }
 
 .figure {
@@ -34,4 +34,17 @@ body {
 .description {
   color: #EDEDED;
   text-align: center;
+}
+
+@media (max-width: 1366px) {
+  .template {
+  margin: 0 15rem;
+  padding: 0 5rem;
+  }
+}
+@media (max-width: 1020px) {
+  .template {
+    margin: 0;
+    padding: 5rem;
+  }
 }
