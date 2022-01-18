@@ -3,7 +3,7 @@ body {
   color: #EDEDED;
 }
 
-small {
+.location {
   text-align: center;
   color: grey;
 }
@@ -13,14 +13,14 @@ small {
 }
 
 .plap {
-  margin-top: 5rem;
+  margin: 5rem 30rem 0;
+  text-align: right;
 }
 
 .figure {
   border: 5px #2b26269b solid;
-  height: 50%;
-  width: 50%;
-  margin: 0;
+  height: 100%;
+  width: 100%;
   padding: 0;
 }
 
