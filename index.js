@@ -1,5 +1,4 @@
 let image = document.querySelector(".profile-pic");
-
 image.onclick = function () {
   alert("Not available!");
 }
@@ -12,9 +11,6 @@ let requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
-let gallery = document.querySelector(".picture-grid");
-
-
 let arrayPromise = fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json", requestOptions)
   .then(res => res.json())
   .then(res => {
@@ -22,6 +18,7 @@ let arrayPromise = fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.c
     return res;
   });
 
+let gallery = document.querySelector(".picture-grid");
 arrayPromise.then(responseArray => {
   responseArray.forEach(item => {
     let container = document.createElement('div');
@@ -39,7 +36,15 @@ arrayPromise.then(responseArray => {
 
     let image = document.createElement('img');
     image.src = item.url;
-    image.alt = `${item.url}-photo`;
+    image.alt = `${item.id}-photo`;
+    image.setAttribute(`id`, `${item.id}`);
     frame.appendChild(image);
   })
+
+
 });
+
+document.addEventListener('click', function (e) {
+  sessionStorage.setItem(`id`, `${e.target.id}`);
+});
+sessionStorage.setItem(`array`, `${arrayPromise}`);
