@@ -14,12 +14,14 @@ let requestOptions = {
 };
 let gallery = document.querySelector(".picture-grid");
 
-
 let arrayPromise = fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json", requestOptions)
   .then(res => res.json())
   .then(res => {
     console.log(res)
     return res;
+  }).catch( res => {
+    console.log(backupData)
+    return backupData;
   });
 
 arrayPromise.then(responseArray => {
