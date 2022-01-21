@@ -7,15 +7,15 @@ let figure = document.querySelector('figure');
 let description = document.querySelector('.description');
 let locationOfPicture = document.querySelector('.location');
 
-  window.onload = () => {
-      let image = document.createElement('img');
-      image.src = pictureURL;
-      image.alt = pictureId;
-      image.title = pictureLocation;
-      image.classList.add('img.fluid');
-      image.classList.add('figure-img');
-      figure.appendChild(image);
+window.onload = () => {
+  let image = document.createElement('img');
+  image.src = pictureURL;
+  image.alt = pictureId;
+  image.title = pictureLocation;
+  image.classList.add('img.fluid');
+  image.classList.add('figure-img');
+  figure.appendChild(image);
 
-      description.innerHTML = `${pictureDescription}`;
-      locationOfPicture.innerHTML = `${pictureLocation}`;
+  description.innerHTML = `${pictureDescription}`;
+  locationOfPicture.innerHTML = `${pictureLocation}`;
 };

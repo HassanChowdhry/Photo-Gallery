@@ -47,11 +47,11 @@ document.addEventListener('click', function (e) {
   sessionStorage.setItem(`id`, `${e.target.id}`);
   sessionStorage.setItem(`location`, `${e.target.title}`);
   sessionStorage.setItem(`url`, `${e.target.src}`);
-  arrayPromise.then(responseArray =>  {
+  arrayPromise.then(responseArray => {
     responseArray.forEach(items => {
       if (items.id == e.target.id) {
         sessionStorage.setItem(`description`, `${items.descreption}`);
       }
-    }
-  )})
+    })
+  })
 });
