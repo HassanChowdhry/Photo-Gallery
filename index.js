@@ -11,6 +11,7 @@ let requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
+
 let arrayPromise = fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json", requestOptions)
   .then(res => res.json())
   .then(res => {
@@ -19,6 +20,7 @@ let arrayPromise = fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.c
   });
 
 let gallery = document.querySelector(".picture-grid");
+
 arrayPromise.then(responseArray => {
   responseArray.forEach(item => {
     let container = document.createElement('div');
@@ -40,18 +42,13 @@ arrayPromise.then(responseArray => {
     image.title = item.location;
     image.setAttribute(`id`, `${item.id}`);
     frame.appendChild(image);
-  })
-});
 
-document.addEventListener('click', function (e) {
-  sessionStorage.setItem(`id`, `${e.target.id}`);
-  sessionStorage.setItem(`location`, `${e.target.title}`);
-  sessionStorage.setItem(`url`, `${e.target.src}`);
-  arrayPromise.then(responseArray => {
-    responseArray.forEach(items => {
-      if (items.id == e.target.id) {
-        sessionStorage.setItem(`description`, `${items.descreption}`);
-      }
+    image.addEventListener('click', () => {
+      sessionStorage.setItem(`id`, `${item.id}`);
+      sessionStorage.setItem(`location`, `${item.location}`);
+      sessionStorage.setItem(`url`, `${item.url}`);
+      sessionStorage.setItem(`description`, `${item.descreption}`);
     })
+
   })
 });
