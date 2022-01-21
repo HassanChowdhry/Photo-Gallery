@@ -19,7 +19,7 @@ let arrayPromise = fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.c
   .then(res => {
     console.log(res)
     return res;
-  }).catch( res => {
+  }).catch(() => {
     console.log(backupData)
     return backupData;
   });
