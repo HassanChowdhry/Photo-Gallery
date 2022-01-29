@@ -16,6 +16,10 @@ const gallery = document.querySelector(".picture-grid");
 
 fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json", requestOptions)
   .then(res => res.json())
+  .catch(() => {
+    console.log(backupData)
+    return backupData;
+  })
   .then(res => {
     dataParsor(res);
   });
