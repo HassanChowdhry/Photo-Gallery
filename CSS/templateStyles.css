@@ -1,0 +1,50 @@
+body {
+  background-color: #171717;
+  color: #EDEDED;
+}
+
+.template {
+  margin: 5rem 30rem 0;
+  text-align: right;
+  
+}
+.frame {
+  text-align: left;
+}
+
+.location {
+  text-align: right;
+  color: grey;
+}
+
+.figure {
+  border: 5px #2b26269b solid;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.figure-img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  color: #EDEDED;
+  text-align: center;
+}
+
+@media (max-width: 1366px) {
+  .template {
+  margin: 0 15rem;
+  padding: 0 5rem;
+  }
+}
+@media (max-width: 1020px) {
+  .template {
+    margin: 0;
+    padding: 5rem;
+  }
+}
