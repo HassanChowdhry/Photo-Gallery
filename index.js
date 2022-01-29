@@ -12,6 +12,7 @@ let requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
+
 const gallery = document.querySelector(".picture-grid");
 
 fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json", requestOptions)
@@ -41,7 +42,17 @@ function dataParsor(responseArray) {
 
     const image = document.createElement('img');
     image.src = item.url;
-    image.alt = `${item.url}-photo`;
+    image.alt = `${item.id}-photo`;
+    image.title = item.location;
+    image.setAttribute(`id`, `${item.id}`);
     frame.appendChild(image);
+
+    image.addEventListener('click', () => {
+      sessionStorage.setItem(`id`, `${item.id}`);
+      sessionStorage.setItem(`location`, `${item.location}`);
+      sessionStorage.setItem(`url`, `${item.url}`);
+      sessionStorage.setItem(`description`, `${item.descreption}`);
+    })
+
   })
 }

@@ -8,10 +8,11 @@ img:hover {
 }
 
 figure {
-  border: 1px #aaa solid;
-  padding: 0.5rem;
+  border: 5px #2b26269b solid;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
@@ -50,8 +51,8 @@ h3 {
 }
 
 .grid-box img {
-  width: 100%;
-  height: 100%;
+  width: 15rem;
+  height: 15rem;
 }
 
 
