@@ -4,7 +4,7 @@ A website for preserving your favourite photos, complete with a separate templat
 
 <hr>
 
-### The Website is developed using the following:
+### This Website is developed using the following:
 - HTML
 - CSS
 - Javascript
