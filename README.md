@@ -8,4 +8,4 @@ A website for preserving your favourite photos, complete with a separate templat
 - Javascript
 
 ### Link To The Website
-[Click Here](https://hassanchowdhry.github.io/Photo-Gallery/)
+<a><img src = "https://img.icons8.com/fluency/344/link.png" title ="link to website" alt = "website-link" width = "40" height = "40"></a>
