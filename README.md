@@ -2,14 +2,14 @@
 
 A website for preserving your favourite photos, complete with a separate template page that includes the location and caption for your chosen photo.
 
-<br>
+<hr>
 
 ### The Website is developed using the following:
 - HTML
 - CSS
 - Javascript
 
-<br>
+<hr>
 
-### Links
+### Links:
  * [Website](https://hassanchowdhry.github.io/Photo-Gallery/)
