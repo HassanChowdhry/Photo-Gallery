@@ -12,4 +12,4 @@ A website for preserving your favourite photos, complete with a separate templat
 <hr>
 
 ### Links:
- * [Website](https://hassanchowdhry.github.io/Photo-Gallery/)
+ * [Photo Gallery](https://hassanchowdhry.github.io/Photo-Gallery/)
