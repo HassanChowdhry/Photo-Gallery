@@ -22,6 +22,7 @@ fetch("https://image-gallery-pjks.s3.ca-central-1.amazonaws.com/data.json", requ
     return backupData;
   })
   .then(res => {
+    console.log(res)
     dataParsor(res);
   });
 
